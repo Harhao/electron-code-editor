@@ -14,6 +14,7 @@ function createWindow() {
     frame: false,
     useContentSize: true,
     resizable: false,
+    opacity: 0.85,
     webPreferences: {
       nodeIntegration: true,
       webSecurity: false,
