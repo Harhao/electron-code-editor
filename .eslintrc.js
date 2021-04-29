@@ -18,11 +18,9 @@ module.exports = {
         typescript: {
           // 从 <roo/>@types 读取类型定义
           alwaysTryTypes: true,
+          project: "./",
         },
         // 使用指定路径 tsconfig.json， <root>/path/to/folder/tsconfig.json
-        typescript: {
-          directory: "./tsconfig.json",
-        }
       },
     },
   };
