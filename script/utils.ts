@@ -12,6 +12,7 @@ export function waitOn(arg0: { port: string | number; interval?: number; }) {
       get(url, res => {
         clearInterval(timer)
         console.log('[waitOn]', green(`"${url}" are already responsive.`), `(${res.statusCode}: ${res.statusMessage})`)
+        console.log(green());
         resolve(res.statusCode)
       }).on('error', err => {
         console.log('[waitOn]', `counter: ${counter++}`)
