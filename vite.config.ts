@@ -12,10 +12,9 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': join(__dirname, 'src/render'),
+      '@renderer': join(__dirname, 'src/render'),
       '@src': join(__dirname, 'src'),
       '@root': __dirname,
-      '@assets': join(__dirname, 'src/renderer/assets'),
     },
   },
   optimizeDeps: {
@@ -34,6 +33,10 @@ export default defineConfig({
     jsxFragment: 'Fragment',
   },
   css: {
+    modules: {
+      scopeBehaviour: 'local',
+      localsConvention: 'camelCase',
+    },
     preprocessorOptions: {
       scss: {
         additionalData: `@import "./src/renderer/assets/style/index.scss";`,

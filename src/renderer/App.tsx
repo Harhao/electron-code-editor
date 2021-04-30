@@ -1,22 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import CodeEditor from '@src/renderer/components/code-editor';
+import NavHeader from '@src/renderer/components/nav-header';
 
 import './App.scss'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      {/* <header className="App-header">
-        vite + electron + react 12121
-        <p>{ count }</p>
-        <p>
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-      </header> */}
+      <NavHeader></NavHeader>
       <CodeEditor></CodeEditor>
     </div>
   )
