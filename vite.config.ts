@@ -6,7 +6,7 @@ import { join } from 'path'
 export default defineConfig({
   plugins: [],
   root: join(__dirname, 'src/renderer'),
-  base: './', 
+  base: './',
   server: {
     port: +process.env.PORT,
   },
@@ -15,7 +15,7 @@ export default defineConfig({
       '@': join(__dirname, 'src/render'),
       '@src': join(__dirname, 'src'),
       '@root': __dirname,
-      '@assets': join(__dirname,'src/renderer/assets')
+      '@assets': join(__dirname, 'src/renderer/assets'),
     },
   },
   optimizeDeps: {
@@ -32,5 +32,12 @@ export default defineConfig({
   },
   esbuild: {
     jsxFragment: 'Fragment',
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "./src/renderer/assets/style/index.scss";`,
+      },
+    },
   },
 })

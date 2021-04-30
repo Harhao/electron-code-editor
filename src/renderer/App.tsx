@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import CodeEditor from '@src/renderer/components/code-editor';
+
 import './App.scss'
 
 function App() {
@@ -6,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         vite + electron + react 12121
         <p>{ count }</p>
         <p>
@@ -14,7 +16,8 @@ function App() {
             count is: {count}
           </button>
         </p>
-      </header>
+      </header> */}
+      <CodeEditor></CodeEditor>
     </div>
   )
 }
